@@ -12,7 +12,7 @@ export default function AppComponent() {
       {/* Do not remove the AppProvider */}
       <AppProvider className="h-full w-full">
         <ViewerProvider>
-          <div className="flex h-full w-full flex-col">
+          <div className="flex h-full w-full flex-col bg-background text-foreground">
             <TopNav />
             <div className="flex-1 overflow-auto">
               <Outlet />
