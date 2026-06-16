@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * cAMP Ascent 🏕️ — Forest/Outdoor Training Theme
+ * Nature-inspired palette: deep evergreen, campfire amber, sky blue accents
+ */
+
+:root {
+  /* Base background and foreground */
+  --color-background: oklch(0.98 0.005 145);
+  --color-foreground: oklch(0.18 0.03 155);
+
+  /* Card and popover surfaces */
+  --color-card: oklch(0.99 0.003 145);
+  --color-card-foreground: oklch(0.18 0.03 155);
+  --color-popover: oklch(0.99 0.003 145);
+  --color-popover-foreground: oklch(0.18 0.03 155);
+
+  /* Primary: Deep Evergreen */
+  --color-primary: oklch(0.40 0.10 155);
+  --color-primary-foreground: oklch(0.98 0.005 145);
+
+  /* Secondary: Warm Stone */
+  --color-secondary: oklch(0.92 0.02 80);
+  --color-secondary-foreground: oklch(0.30 0.05 80);
+
+  /* Accent: Campfire Amber */
+  --color-accent: oklch(0.75 0.15 65);
+  --color-accent-foreground: oklch(0.20 0.05 65);
+
+  /* Muted backgrounds */
+  --color-muted: oklch(0.94 0.01 145);
+  --color-muted-foreground: oklch(0.50 0.02 155);
+
+  /* Destructive: Forest Fire Red */
+  --color-destructive: oklch(0.55 0.20 25);
+  --color-destructive-foreground: oklch(0.98 0.005 25);
+
+  /* Border and input */
+  --color-border: oklch(0.88 0.02 145);
+  --color-input: oklch(0.88 0.02 145);
+  --color-ring: oklch(0.40 0.10 155);
+
+  /* Sidebar: darker forest */
+  --color-sidebar: oklch(0.25 0.06 155);
+  --color-sidebar-foreground: oklch(0.92 0.01 145);
+  --color-sidebar-accent: oklch(0.35 0.08 155);
+  --color-sidebar-accent-foreground: oklch(0.95 0.005 145);
+  --color-sidebar-border: oklch(0.32 0.05 155);
+  --color-sidebar-ring: oklch(0.50 0.10 155);
+  --color-sidebar-primary: oklch(0.75 0.15 65);
+  --color-sidebar-primary-foreground: oklch(0.15 0.03 65);
+
+  /* Chart colors */
+  --color-chart-1: oklch(0.40 0.10 155);
+  --color-chart-2: oklch(0.75 0.15 65);
+  --color-chart-3: oklch(0.55 0.12 200);
+  --color-chart-4: oklch(0.60 0.15 140);
+  --color-chart-5: oklch(0.65 0.10 30);
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Dark mode */
+.dark {
+  --color-background: oklch(0.15 0.03 155);
+  --color-foreground: oklch(0.92 0.01 145);
+  --color-card: oklch(0.20 0.03 155);
+  --color-card-foreground: oklch(0.92 0.01 145);
+  --color-popover: oklch(0.20 0.03 155);
+  --color-popover-foreground: oklch(0.92 0.01 145);
+  --color-primary: oklch(0.60 0.12 155);
+  --color-primary-foreground: oklch(0.15 0.03 155);
+  --color-secondary: oklch(0.28 0.03 155);
+  --color-secondary-foreground: oklch(0.90 0.01 145);
+  --color-accent: oklch(0.75 0.15 65);
+  --color-accent-foreground: oklch(0.15 0.03 65);
+  --color-muted: oklch(0.25 0.02 155);
+  --color-muted-foreground: oklch(0.65 0.02 155);
+  --color-destructive: oklch(0.55 0.20 25);
+  --color-destructive-foreground: oklch(0.98 0.005 25);
+  --color-border: oklch(0.30 0.03 155);
+  --color-input: oklch(0.30 0.03 155);
+  --color-ring: oklch(0.60 0.12 155);
+}
+
+/* cAMP Ascent custom utility classes */
+@layer utilities {
+  .camp-gradient {
+    background: linear-gradient(135deg, oklch(0.25 0.06 155), oklch(0.35 0.08 155));
+  }
+  .camp-glow {
+    box-shadow: 0 0 20px oklch(0.75 0.15 65 / 0.3);
+  }
+  .forest-preserver {
+    color: oklch(0.45 0.15 145);
+  }
+  .fire-starter {
+    color: oklch(0.60 0.20 30);
+  }
+}
