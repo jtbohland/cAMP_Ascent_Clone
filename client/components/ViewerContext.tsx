@@ -103,8 +103,11 @@ export function ViewerProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useViewer() {
+export function useViewer(): ViewerContextType {
   const ctx = useContext(ViewerContext);
-  if (!ctx) throw new Error("useViewer must be used within ViewerProvider");
+  if (!ctx) {
+    // Return a safe default when rendered outside ViewerProvider (e.g. during error boundaries)
+    return { viewer: null, setViewer: () => {}, logout: () => {}, isLoading: true };
+  }
   return ctx;
 }
