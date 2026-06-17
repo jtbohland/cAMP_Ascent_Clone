@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/*
+ * Force light mode: remap the dark: variant to a class selector
+ * that we never add, so dark: utilities become inert.
+ */
+@custom-variant dark (&:is(.dark *));
 
 /*
  * cAMP Ascent 🏕️ — Forest/Outdoor Training Theme
