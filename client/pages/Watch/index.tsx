@@ -368,18 +368,18 @@ export default function WatchPage() {
       </div>
 
       {/* Video embed area */}
-      <div className="flex-1 flex items-center justify-center bg-black relative">
-          {clip.videoUrl ? (
+      <div className="flex-1 relative bg-black min-h-0">
+        {clip.videoUrl ? (
           <iframe
             ref={videoRef}
             src={convertToEmbedUrl(clip.videoUrl)}
-            className="w-full h-full"
+            className="absolute inset-0 w-full h-full"
             allow="autoplay; fullscreen"
             allowFullScreen
             title={clip.title}
           />
         ) : (
-          <div className="flex flex-col items-center gap-3 text-white/70">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-white/70">
             <Icon icon="video" />
             <p className="text-sm">Video URL not yet configured</p>
             <p className="text-xs text-white/40">Clip will be available once the admin adds the video link</p>
